@@ -10,13 +10,16 @@
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
     <script src="main.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuh3mv6yyxLZdBtip1ZpAZ63ir_YseLv0&callback=initMap">
+    </script>
+
 
     <style>
     
     header { 
             font-family: 'Baloo';
-            color: rgb(211, 66, 66);
-            background-color: rgb(3, 43, 23); /*dodgerblue (SVG)*/
+            background-color: rgb(136, 201, 255); /*dodgerblue (SVG)*/
             text-align: center;
             font-size: 20px;
             margin-top: -2px;
@@ -50,6 +53,8 @@
             text-align: center;
             color:rgb(255, 127, 127);
             font-family: 'Baloo';
+            display: inline-block;
+
 
             text-shadow:
                 3px 3px 0 rgb(0, 0, 0),
@@ -69,6 +74,7 @@
             text-align: center;
             color:#7FDBFF;
             font-family: 'Baloo';
+            display: inline-block;
 
             text-shadow:
                 3px 3px 0 rgb(0, 0, 0),
@@ -142,15 +148,23 @@
             bottom:120px;
         }
 
+        #map {
+            height: 100%;
+        }
+
     </style>
 
     <body>
 
-        <header>
+        <span><header>
             <big><stong><h1> Local<h2>FAVS</h2> </h1></stong></big>
-        </header>
+        </header></span>
 
         <center><div id="table">
+
+            <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+            
+
 
             <button id="deli_button" class="user_button"><span>Han's Deli</span></button>
             <br>
@@ -172,6 +186,7 @@
 
             <div id= "deli_info" class="info">
                 <p1>Han's Deli</p1>
+                <div id="map"></div>
             </div>
             
             <div id= "hairstylist_info" class="info">
